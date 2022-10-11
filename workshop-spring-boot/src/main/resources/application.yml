@@ -1,0 +1,28 @@
+app:
+  configuracion:
+    fichero: /docus/war-and-peace.txt
+    hilos:
+      numero: 10
+      sleep: 1000
+      
+server:
+  port: 8080
+  servlet:
+    context-path: /graalvm        
+      
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+spring:
+  main:
+   allow-bean-definition-overriding: true
